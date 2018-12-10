@@ -21,13 +21,15 @@ void MainWindow::on_pushButton_Login_clicked()
 {
     if(ui->lineEdit_Username->text() == "test" && ui->lineEdit_Password->text() == "test123")
     {
-        QMessageBox::information(this, "Login", "Authentication Successful");
-        hide();
-        diag = new Dialog(this);
-        diag->show();
+//        QMessageBox::information(this, "Login", "Authentication Successful");
+//        hide();
+//        diag = new Dialog(this);
+//        diag->show();
+        ui->statusBar->showMessage("Username and password correct", 3000);
     }
     else
     {
-        QMessageBox::warning(this, "Login", "Authentication failed");
+//        QMessageBox::warning(this, "Login", "Authentication failed");
+        ui->statusBar->showMessage("Username and password incorrect", 3000);
     }
 }
