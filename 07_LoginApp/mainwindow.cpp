@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_pic->setPixmap(pix.scaled(ui->label_pic->width(), ui->label_pic->height(), Qt::KeepAspectRatio));
     ui->statusBar->addWidget(ui->label_3);
     ui->statusBar->addWidget(ui->progressBar);
+    ui->lineEdit_Password->setEchoMode(QLineEdit::Password);
 }
 
 MainWindow::~MainWindow()
